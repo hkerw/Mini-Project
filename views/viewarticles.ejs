@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - Written articles</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>View articles</h2>
+    <table>
+        <tr><th>Title</th></tr>
+        <% articles.forEach(function(article) { %>
+          <tr>
+            <form action="/clickedarticle" method="GET">
+              <td><input type="submit" name="keyword" value="<%= article.article_title %>""></input></td>
+            </form>
+          </tr>
+        <% }) %>    
+  </table>   
+  </body>
+</html>

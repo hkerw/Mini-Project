@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - <%= articles.article_title %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2><%= articles[0].article_title %></h2>
+    <% articles.forEach(function(article) { %>
+        <h3>Last edited at: <%= article.article_date.toDateString() %> <%= article.article_date.getHours() %>:<%= article.article_date.getMinutes() %></h3>
+        <h3>Last edited by: <%= article.username %></h3>
+        <h3>Topic: <%= article.topic_title %></h3>
+        <p><%= article.article_content %></p>
+    <% }) %>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - Search</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>Search for articles</h2>
+    <form action="/search-result" method="GET">
+      <p>Search results include both topics and keywords!</p>
+      <input id="search-box" type="text" name="keyword" value="">
+      <input type="submit" value="Search" >
+    </form>
+  </body>
+</html>
