@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - Users</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>Users</h2>
+    <table>
+    <tr><th>Username</th></tr>
+    <% users.forEach(function(user) { %>
+      <tr>
+        <form action="/clickeduser" method="GET">
+          <td><input type="submit" name="keyword" value=<%= user.username %>></input></td>
+        </form>
+    </tr>
+    <% }) %>      
+    </table>  
+  </body>
+</html>

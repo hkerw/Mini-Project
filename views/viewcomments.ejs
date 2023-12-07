@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>View comments</h2>
+    <table>
+        <tr><th>Date</th><th>Username</th><th>Content</th></tr>
+        <% articles.forEach(function(comment) { %>
+          <tr>
+            <td><%= comment.comment_date.toDateString() %> <%= comment.comment_date.getHours() %>:<%= comment.comment_date.getMinutes() %></td>
+            <td><%= comment.username %></td>
+            <td><%= comment.comment_content %></td>
+          </tr>
+        <% }) %>    
+  </table>   
+  </body>
+</html>

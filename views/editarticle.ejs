@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - Edit article</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>Edit article</h2>
+
+    <form method="POST" action="/articleedited">
+      <p>Username: <input readonly id="username" type="text" name="username" value="<%=username%>" /></p>
+      <p>Title: <input readonly id="title" type="text" name="title" value="<%=title%>" /></p>
+      <p>Topic: <input id="topic" type="text" name="topic" value="<%=topic%>" /></p>
+      <p>Content: <textarea id="content" type="text" name="content" value="" ><%=content%></textarea></p>
+      <input type="submit" value="Confirm" />
+    </form>    
+    <p class="errormessage"><%=errormessage %></p>
+  </body>
+</html>
