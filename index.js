@@ -4,6 +4,8 @@ var session = require ('express-session')
 var express = require ('express')
 var ejs = require('ejs')
 var bodyParser= require ('body-parser')
+var validator = require ('express-validator');
+const expressSanitizer = require('express-sanitizer');
 const mysql = require('mysql');
 
 
@@ -39,6 +41,11 @@ const db = mysql.createConnection ({
     password: 'wikipass',
     database: 'theWikiDatabase'
 });
+
+
+// Create an input sanitizer
+
+app.use(expressSanitizer());
 
 
 // Connect to the database
@@ -81,4 +88,4 @@ require("./routes/main")(app, siteData);
 
 // Start the web app listening
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))

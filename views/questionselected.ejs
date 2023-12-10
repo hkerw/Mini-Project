@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=siteName%> - Trivia Questions</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%></h1>
+    <h2>Question: <%=thequestion%></h2>
+    <form action="/questionanswered" method="POST">
+        <% for (let i = 0; i < answers.length; i++) { %>
+            <input type="radio" name="answers" value="<%= answers[i] %>">
+            <label><%= answers[i] %></label><br>
+        <% } %>
+      <input type="submit" value="Submit Answer" >
+    </form>
+  </body>
+</html>
