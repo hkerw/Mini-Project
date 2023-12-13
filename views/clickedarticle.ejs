@@ -13,13 +13,13 @@
         <h3>Topic: <%= article.topic_title %></h3>
         <form action="/editarticle" method="GET">
           <p hidden>Username: <input id="username" type="text" name="username" value="<%=article.username%>" /></p>
-          <p hidden>Title: <input id="title" type="text" name="title" value="<%=article.article_title%>" /></p>
+          <p hidden>Title: <input id="title" type="text" name="title" value="<%=article.article_title%>" /></p> <!--Extract all values needed to edit the article-->
           <p hidden>Topic: <input id="topic" type="text" name="topic" value="<%=article.topic_title%>" /></p>
           <p hidden>Content: <textarea id="content" type="text" name="content" value="" ><%=article.article_content%></textarea></p>
           <input type="submit" value="Edit Article" />
         </form>
         <p><%= article.article_content %></p>
-        <form action="/addcomment" method="GET">
+        <form action="/addcomment" method="GET"> <!--Buttons to access commenting for users-->
           <td><button name="keyword" value="<%= article.article_title %>">Comment</button></td>
       </form>
       <form action="/viewcomments" method="GET">

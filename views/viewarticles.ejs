@@ -9,7 +9,7 @@
     <h2>View articles</h2>
     <table>
         <tr><th>Title</th></tr>
-        <% articles.forEach(function(article) { %>
+        <% articles.forEach(function(article) { %> <!--Lists out each article in the database-->
           <tr>
             <form action="/clickedarticle" method="GET">
               <td><input type="submit" name="keyword" value="<%= article.article_title %>""></input></td>

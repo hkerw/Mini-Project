@@ -9,7 +9,7 @@
     <h2>Question: <%=thequestion%></h2>
     <form action="/questionanswered" method="POST">
         <% for (let i = 0; i < answers.length; i++) { %>
-            <input type="radio" name="answers" value="<%= answers[i] %>">
+            <input type="radio" name="answers" value="<%= answers[i] %>"> <!--Lay out the 4 options of the multiple choice question-->
             <label><%= answers[i] %></label><br>
         <% } %>
       <input type="submit" value="Submit Answer" >

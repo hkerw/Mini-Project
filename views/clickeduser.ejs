@@ -10,7 +10,7 @@
         <h2>Articles written by <%= users[0].username %></h2>
         <table>
             <tr><th>Title</th></tr>
-            <% users.forEach(function(article) { %>
+            <% users.forEach(function(article) { %> <!--Display all articles the user has written-->
               <tr>
                 <form action="/clickedarticle" method="GET">
                   <td><input type="submit" name="keyword" value="<%= article.article_title %>""></input></td>
@@ -19,7 +19,7 @@
             <% }) %>    
       </table>  
         <% } else{ %>  
-            <h3>User has not written any articles</h3>
+            <h3>User has not written any articles</h3> <!--If they haven't written any, display this message-->
          <% } %>
   </body>
 </html>

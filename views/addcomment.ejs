@@ -9,7 +9,7 @@
     <h2>Add a Comment</h2>
 
     <form method="POST" action="/commentadded">
-      <p><input id="article_title", type="hidden", name="article_title" value="<%=article_title%>" /></p>
+      <p><input id="article_title", type="hidden", name="article_title" value="<%=article_title%>" /></p> <!--Extract all values needed to insert a comment-->
       <p>Username: <input readonly id="username" type="text" name="username" value="<%=username%>" /></p>
       <p>Content: <textarea id="content" type="text" name="content" value="" ><%=content%></textarea></p>
       <input type="submit" value="Add Comment" />
